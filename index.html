@@ -31,23 +31,168 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                Hi, I'm <span class="typewriter" id="typewriter">Manoj</span>
-            </h1>
-            <p class="hero-subtitle">Java Developer Exploring Web3 & Blockchain</p>
-            <p class="hero-description">
-                Passionate about building decentralized applications (DApps) and smart contracts, with experience in Java development. Bridging traditional software development with blockchain innovation to create secure and efficient solutions.
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Hire Me</a>
+   
+
+<section id="home" class="hero">
+    <!-- Enhanced Animated Tech Background -->
+    <div class="tech-bg">
+        <!-- Matrix Rain Effect -->
+        <canvas id="matrix-rain" class="matrix-canvas"></canvas>
+        
+        <!-- Circuit Pattern with Pulse -->
+        <div class="circuit-pattern">
+            <svg class="circuit-svg" viewBox="0 0 800 600">
+                <!-- Animated horizontal lines -->
+                <line x1="0" y1="100" x2="800" y2="100" class="circuit-line pulse-line" stroke-dasharray="10,5"/>
+                <line x1="0" y1="200" x2="800" y2="200" class="circuit-line pulse-line-2" stroke-dasharray="15,5"/>
+                <line x1="0" y1="300" x2="800" y2="300" class="circuit-line pulse-line-3" stroke-dasharray="8,8"/>
+                <line x1="0" y1="400" x2="800" y2="400" class="circuit-line pulse-line-4" stroke-dasharray="12,3"/>
+                <line x1="0" y1="500" x2="800" y2="500" class="circuit-line pulse-line-5" stroke-dasharray="20,5"/>
+                
+                <!-- Animated vertical lines -->
+                <line x1="150" y1="0" x2="150" y2="600" class="circuit-line pulse-vertical-1" stroke-dasharray="10,5"/>
+                <line x1="300" y1="0" x2="300" y2="600" class="circuit-line pulse-vertical-2" stroke-dasharray="15,8"/>
+                <line x1="450" y1="0" x2="450" y2="600" class="circuit-line pulse-vertical-3" stroke-dasharray="5,10"/>
+                <line x1="600" y1="0" x2="600" y2="600" class="circuit-line pulse-vertical-4" stroke-dasharray="18,5"/>
+                
+                <!-- Glowing circuit nodes -->
+                <circle cx="150" cy="100" r="4" class="circuit-node glow-node-1"/>
+                <circle cx="300" cy="200" r="4" class="circuit-node glow-node-2"/>
+                <circle cx="450" cy="300" r="4" class="circuit-node glow-node-3"/>
+                <circle cx="600" cy="400" r="4" class="circuit-node glow-node-4"/>
+                <circle cx="150" cy="500" r="4" class="circuit-node glow-node-5"/>
+            </svg>
+        </div>
+        
+        <!-- Enhanced Floating Tech Icons -->
+        <div class="floating-icons">
+            <div class="tech-icon-float icon-1 quantum-float">
+                <i class="fab fa-ethereum"></i>
+                <div class="icon-glow"></div>
+            </div>
+            <div class="tech-icon-float icon-2 orbit-float">
+                <div class="binary-code glitch-text">01</div>
+            </div>
+            <div class="tech-icon-float icon-3 spiral-float">
+                <i class="fas fa-microchip"></i>
+                <div class="icon-pulse"></div>
+            </div>
+            <div class="tech-icon-float icon-4 wave-float">
+                <div class="hex-code neon-text">{}</div>
+            </div>
+            <div class="tech-icon-float icon-5 bounce-3d">
+                <i class="fab fa-bitcoin"></i>
+                <div class="crypto-rings">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                </div>
+            </div>
+            <div class="tech-icon-float icon-6 magnetic-float">
+                <div class="binary-code hologram-text">10</div>
             </div>
         </div>
-        <div class="hero-bg"></div>
-    </section>
+        
+        <!-- Enhanced Data Stream -->
+        <div class="data-stream">
+            <div class="stream-line stream-1 lightning-stream">
+                <div class="data-packet packet-1 neon-packet"></div>
+                <div class="data-packet packet-2 plasma-packet"></div>
+                <div class="data-packet packet-3 quantum-packet"></div>
+            </div>
+            <div class="stream-line stream-2 cyber-stream">
+                <div class="data-packet packet-1 hologram-packet"></div>
+                <div class="data-packet packet-2 energy-packet"></div>
+            </div>
+            <div class="stream-line stream-3 neural-stream">
+                <div class="data-packet packet-1 digital-packet"></div>
+                <div class="data-packet packet-2 matrix-packet"></div>
+                <div class="data-packet packet-3 void-packet"></div>
+            </div>
+        </div>
+        
+        <!-- Enhanced Holographic Grid -->
+        <div class="holo-grid cyber-grid">
+            <div class="grid-line grid-line-1"></div>
+            <div class="grid-line grid-line-2"></div>
+            <div class="grid-line grid-line-3"></div>
+            <div class="grid-line grid-line-4"></div>
+        </div>
+        
+        <!-- New Particle System -->
+        <div class="particle-system" id="particles">
+            <!-- Particles will be generated by JavaScript -->
+        </div>
+        
+        <!-- Energy Waves -->
+        <div class="energy-waves">
+            <div class="wave wave-1"></div>
+            <div class="wave wave-2"></div>
+            <div class="wave wave-3"></div>
+        </div>
+    </div>
 
+    <!-- Enhanced Hero Content -->
+    <div class="hero-content">
+        <div class="hero-text-container cyber-container">
+            <!-- Hologram Effect Overlay -->
+            <div class="hologram-overlay"></div>
+            
+            <h1 class="hero-title">
+                <span class="title-line glitch-effect">Hi, I'm</span>
+                <span class="name-highlight">
+                    <span class="typewriter cyber-text" id="typewriter">Manoj</span>
+                    <div class="typewriter-cursor quantum-cursor"></div>
+                </span>
+            </h1>
+            
+            <div class="hero-subtitle-container">
+                <p class="hero-subtitle">
+                    <span class="typing-animation neon-typing">Java Developer</span>
+                    <span class="separator cyber-separator">|</span>
+                    <span class="typing-animation delay-1 plasma-typing">Web3 Explorer</span>
+                    <span class="separator cyber-separator">|</span>
+                    <span class="typing-animation delay-2 quantum-typing">Blockchain Innovator</span>
+                </p>
+            </div>
+            
+            <div class="hero-description-container">
+    <p class="hero-description matrix-text visible">
+        Building the future of decentralized web with smart contracts and DApps. 
+        Transforming traditional software development through blockchain technology 
+        to create secure, transparent, and innovative solutions.
+    </p>
+</div>
+            
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary cyber-btn quantum-btn">
+                    <span class="btn-text">View Projects</span>
+                    <div class="btn-glow quantum-glow"></div>
+                    <div class="btn-particles"></div>
+                </a>
+                <a href="#contact" class="btn btn-secondary neon-btn hologram-btn">
+                    <span class="btn-text">Let's Connect</span>
+                    <div class="btn-border cyber-border"></div>
+                    <div class="btn-scanner"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Enhanced Scanning Effects -->
+    <div class="scan-line quantum-scan"></div>
+    <div class="vertical-scan"></div>
+    <div class="radar-sweep"></div>
+    
+    <!-- New Terminal Effect -->
+    <div class="terminal-overlay">
+        <div class="terminal-text">
+            <span class="terminal-prompt">user@portfolio:~$ </span>
+            <span class="terminal-command">initializing_portfolio.exe</span>
+            <span class="terminal-cursor">_</span>
+        </div>
+    </div>
+</section>
     <!-- About Section -->
     <section id="about" class="about section">
         <div class="container">
@@ -74,7 +219,7 @@
                             <span class="stat-label">Projects Completed</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">2+</span>
+                            <span class="stat-number">1+</span>
                             <span class="stat-label">Years Experience</span>
                         </div>
                         <div class="stat">
@@ -82,9 +227,13 @@
                             <span class="stat-label">Technologies Mastered</span>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary download-cv">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
+                    <a href="https://drive.google.com/uc?export=download&id=19LVGx3seAhCe4C9JN-KunBdcdOu4uPxH" 
+   class="btn btn-primary download-cv" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   download="Manoj_Kumar_CV.pdf">
+    <i class="fas fa-download"></i> Download CV
+</a>
                 </div>
             </div>
         </div>
@@ -218,9 +367,13 @@
                         <img src="tictactoee.jpg" alt="Tic-Tac-Toe Master">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
+    <a href="https://your-live-demo-url.com" class="project-link" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i>
+    </a>
+    <a href="https://github.com/nxtman0z/Tic-Tac-Toe-master" class="project-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+    </a>
+</div>
                         </div>
                     </div>
                     <div class="project-info">
@@ -239,9 +392,13 @@
                         <img src="ecopoints.jpg" alt="NFT Marketplace">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
+    <a href="https://your-live-demo-url.com" class="project-link" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i>
+    </a>
+    <a href="https://github.com/nxtman0z/EcoPoints" class="project-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+    </a>
+</div>
                         </div>
                     </div>
                     <div class="project-info">
@@ -260,9 +417,13 @@
                         <img src="yellow bird.jpg" alt="Flappy-Bird">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
+    <a href="https://your-live-demo-url.com" class="project-link" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i>
+    </a>
+    <a href="https://github.com/nxtman0z/FlappyBird" class="project-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+    </a>
+</div>
                         </div>
                     </div>
                     <div class="project-info">
@@ -281,9 +442,13 @@
                         <img src="auction.jpg" alt="Simple-Auction">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
+    <a href="https://your-live-demo-url.com" class="project-link" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i>
+    </a>
+    <a href="https://github.com/nxtman0z/Simple-Auction" class="project-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+    </a>
+</div>
                         </div>
                     </div>
                     <div class="project-info">
@@ -302,9 +467,13 @@
                         <img src="store.jpg" alt="Simple-Storage">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
+    <a href="https://your-live-demo-url.com" class="project-link" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i>
+    </a>
+    <a href="https://github.com/nxtman0z/Simple-Storage" class="project-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+    </a>
+</div>
                         </div>
                     </div>
                     <div class="project-info">
@@ -323,9 +492,13 @@
                         <img src="verifier.jpg" alt="certificate verifier">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
+    <a href="https://your-live-demo-url.com" class="project-link" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i>
+    </a>
+    <a href="https://github.com/nxtman0z/CERTIFICATE-VERIFIER-DApp" class="project-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+    </a>
+</div>
                         </div>
                     </div>
                     <div class="project-info">
@@ -371,11 +544,19 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
-                    </div>
+    <a href="https://www.linkedin.com/in/manoj-kumar-panigrahi/" class="social-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/nxtman0z" class="social-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://x.com/nxtman0z" class="social-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://discord.com/users/1351613063408779326" class="social-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-discord"></i>
+    </a>
+</div>
                 </div>
                 <form class="contact-form" id="contact-form">
                     <div class="form-group">

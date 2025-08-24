@@ -834,3 +834,4 @@ if ('serviceWorker' in navigator) {
 console.log('🚀 Portfolio loaded successfully!');
 console.log('💡 Tip: Add ?debug=true to the URL for debug mode');
 console.log('🎮 Try the Konami code: ↑↑↓↓←→←→BA');
+
