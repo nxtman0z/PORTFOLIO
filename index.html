@@ -4,24 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header & Navigation -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="blockchain-loader">
+            <div class="block block-1"></div>
+            <div class="block block-2"></div>
+            <div class="block block-3"></div>
+            <div class="block block-4"></div>
+            <div class="connecting-line"></div>
+        </div>
+        <div class="loading-text">Initializing Portfolio...</div>
+        <div class="loading-percentage">0%</div>
+    </div>
+    <div id="blockchain-network" class="blockchain-network"></div>
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">Portfolio</div>
+            <div class="logo">
+                <i class="fab fa-ethereum"></i>
+                <span class="logo-text">Obito.dev</span>
+                <div class="logo-glow"></div>
+            </div>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
-            <button class="theme-toggle" id="theme-toggle">
-                <i class="fas fa-moon"></i>
-            </button>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="wallet-connect" id="wallet-connect">
+                    <i class="fas fa-wallet"></i>
+                    <span>Connect Wallet</span>
+                </button>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -29,211 +51,226 @@
             </div>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-   
-
-<section id="home" class="hero">
-    <!-- Enhanced Animated Tech Background -->
-    <div class="tech-bg">
-        <!-- Matrix Rain Effect -->
-        <canvas id="matrix-rain" class="matrix-canvas"></canvas>
-        
-        <!-- Circuit Pattern with Pulse -->
-        <div class="circuit-pattern">
-            <svg class="circuit-svg" viewBox="0 0 800 600">
-                <!-- Animated horizontal lines -->
-                <line x1="0" y1="100" x2="800" y2="100" class="circuit-line pulse-line" stroke-dasharray="10,5"/>
-                <line x1="0" y1="200" x2="800" y2="200" class="circuit-line pulse-line-2" stroke-dasharray="15,5"/>
-                <line x1="0" y1="300" x2="800" y2="300" class="circuit-line pulse-line-3" stroke-dasharray="8,8"/>
-                <line x1="0" y1="400" x2="800" y2="400" class="circuit-line pulse-line-4" stroke-dasharray="12,3"/>
-                <line x1="0" y1="500" x2="800" y2="500" class="circuit-line pulse-line-5" stroke-dasharray="20,5"/>
-                
-                <!-- Animated vertical lines -->
-                <line x1="150" y1="0" x2="150" y2="600" class="circuit-line pulse-vertical-1" stroke-dasharray="10,5"/>
-                <line x1="300" y1="0" x2="300" y2="600" class="circuit-line pulse-vertical-2" stroke-dasharray="15,8"/>
-                <line x1="450" y1="0" x2="450" y2="600" class="circuit-line pulse-vertical-3" stroke-dasharray="5,10"/>
-                <line x1="600" y1="0" x2="600" y2="600" class="circuit-line pulse-vertical-4" stroke-dasharray="18,5"/>
-                
-                <!-- Glowing circuit nodes -->
-                <circle cx="150" cy="100" r="4" class="circuit-node glow-node-1"/>
-                <circle cx="300" cy="200" r="4" class="circuit-node glow-node-2"/>
-                <circle cx="450" cy="300" r="4" class="circuit-node glow-node-3"/>
-                <circle cx="600" cy="400" r="4" class="circuit-node glow-node-4"/>
-                <circle cx="150" cy="500" r="4" class="circuit-node glow-node-5"/>
-            </svg>
+    <section id="home" class="hero">
+        <div class="blockchain-bg">
+            <canvas id="blockchain-canvas" class="blockchain-canvas"></canvas>
+            <div class="crypto-rain" id="crypto-rain"></div>
+            <div class="network-nodes" id="network-nodes"></div>
+            <div class="data-flow" id="data-flow"></div>
         </div>
-        
-        <!-- Enhanced Floating Tech Icons -->
-        <div class="floating-icons">
-            <div class="tech-icon-float icon-1 quantum-float">
-                <i class="fab fa-ethereum"></i>
-                <div class="icon-glow"></div>
-            </div>
-            <div class="tech-icon-float icon-2 orbit-float">
-                <div class="binary-code glitch-text">01</div>
-            </div>
-            <div class="tech-icon-float icon-3 spiral-float">
-                <i class="fas fa-microchip"></i>
-                <div class="icon-pulse"></div>
-            </div>
-            <div class="tech-icon-float icon-4 wave-float">
-                <div class="hex-code neon-text">{}</div>
-            </div>
-            <div class="tech-icon-float icon-5 bounce-3d">
-                <i class="fab fa-bitcoin"></i>
-                <div class="crypto-rings">
-                    <div class="ring ring-1"></div>
-                    <div class="ring ring-2"></div>
-                    <div class="ring ring-3"></div>
+
+        <div class="hero-content">
+            <div class="hero-glass-morphism">
+                <div class="blockchain-avatar">
+                    <div class="avatar-ring ring-1"></div>
+                    <div class="avatar-ring ring-2"></div>
+                    <div class="avatar-ring ring-3"></div>
+                    <img src="DP.jpg" alt="Manoj Kumar" class="avatar-image">
+                    <div class="avatar-glow"></div>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="greeting-text">Hello, I'm</span>
+                    <span class="name-highlight">
+                        <span class="typewriter" id="typewriter">Manoj Panigrahi</span>
+                        <div class="cursor blockchain-cursor"></div>
+                    </span>
+                </h1>
+                
+                <div class="hero-roles">
+                    <div class="role-card active" data-role="java">
+                        <i class="fab fa-java"></i>
+                        <span>Java Developer</span>
+                    </div>
+                    <div class="role-card" data-role="blockchain">
+                        <i class="fab fa-ethereum"></i>
+                        <span>Blockchain Developer</span>
+                    </div>
+                    <div class="role-card" data-role="web3">
+                        <i class="fas fa-globe"></i>
+                        <span>Web3 Developer</span>
+                    </div>
+                </div>
+
+                <p class="hero-description">
+                    Full-stack Java developer with expertise in blockchain technology and Web3 development. 
+                    Building robust backend systems with Java while creating innovative decentralized applications 
+                    that bridge traditional software development with cutting-edge blockchain solutions.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="20">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="10">0</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="4">0</div>
+                        <div class="stat-label">Blockchains</div>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary blockchain-btn">
+                        <i class="fas fa-rocket"></i>
+                        <span>View Projects</span>
+                        <div class="btn-blockchain-effect"></div>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary web3-btn">
+                        <i class="fas fa-handshake"></i>
+                        <span>Let's Connect</span>
+                        <div class="btn-glow-effect"></div>
+                    </a>
+                </div>
+                <div class="transaction-flow">
+                    <div class="transaction-block" id="tx-block-1">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="transaction-line"></div>
+                    <div class="transaction-block" id="tx-block-2">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="transaction-line"></div>
+                    <div class="transaction-block" id="tx-block-3">
+                        <i class="fas fa-cube"></i>
+                    </div>
                 </div>
             </div>
-            <div class="tech-icon-float icon-6 magnetic-float">
-                <div class="binary-code hologram-text">10</div>
-            </div>
         </div>
-        
-        <!-- Enhanced Data Stream -->
-        <div class="data-stream">
-            <div class="stream-line stream-1 lightning-stream">
-                <div class="data-packet packet-1 neon-packet"></div>
-                <div class="data-packet packet-2 plasma-packet"></div>
-                <div class="data-packet packet-3 quantum-packet"></div>
-            </div>
-            <div class="stream-line stream-2 cyber-stream">
-                <div class="data-packet packet-1 hologram-packet"></div>
-                <div class="data-packet packet-2 energy-packet"></div>
-            </div>
-            <div class="stream-line stream-3 neural-stream">
-                <div class="data-packet packet-1 digital-packet"></div>
-                <div class="data-packet packet-2 matrix-packet"></div>
-                <div class="data-packet packet-3 void-packet"></div>
-            </div>
-        </div>
-        
-        <!-- Enhanced Holographic Grid -->
-        <div class="holo-grid cyber-grid">
-            <div class="grid-line grid-line-1"></div>
-            <div class="grid-line grid-line-2"></div>
-            <div class="grid-line grid-line-3"></div>
-            <div class="grid-line grid-line-4"></div>
-        </div>
-        
-        <!-- New Particle System -->
-        <div class="particle-system" id="particles">
-            <!-- Particles will be generated by JavaScript -->
-        </div>
-        
-        <!-- Energy Waves -->
-        <div class="energy-waves">
-            <div class="wave wave-1"></div>
-            <div class="wave wave-2"></div>
-            <div class="wave wave-3"></div>
-        </div>
-    </div>
 
-    <!-- Enhanced Hero Content -->
-    <div class="hero-content">
-        <div class="hero-text-container cyber-container">
-            <!-- Hologram Effect Overlay -->
-            <div class="hologram-overlay"></div>
-            
-            <h1 class="hero-title">
-                <span class="title-line glitch-effect">Hi, I'm</span>
-                <span class="name-highlight">
-                    <span class="typewriter cyber-text" id="typewriter">Manoj</span>
-                    <div class="typewriter-cursor quantum-cursor"></div>
-                </span>
-            </h1>
-            
-            <div class="hero-subtitle-container">
-                <p class="hero-subtitle">
-                    <span class="typing-animation neon-typing">Java Developer</span>
-                    <span class="separator cyber-separator">|</span>
-                    <span class="typing-animation delay-1 plasma-typing">Web3 Explorer</span>
-                    <span class="separator cyber-separator">|</span>
-                    <span class="typing-animation delay-2 quantum-typing">Blockchain Innovator</span>
-                </p>
+        <div class="floating-crypto">
+            <div class="crypto-element ethereum">
+                <i class="fab fa-ethereum"></i>
             </div>
-            
-            <div class="hero-description-container">
-    <p class="hero-description matrix-text visible">
-        Building the future of decentralized web with smart contracts and DApps. 
-        Transforming traditional software development through blockchain technology 
-        to create secure, transparent, and innovative solutions.
-    </p>
-</div>
-            
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary cyber-btn quantum-btn">
-                    <span class="btn-text">View Projects</span>
-                    <div class="btn-glow quantum-glow"></div>
-                    <div class="btn-particles"></div>
-                </a>
-                <a href="#contact" class="btn btn-secondary neon-btn hologram-btn">
-                    <span class="btn-text">Let's Connect</span>
-                    <div class="btn-border cyber-border"></div>
-                    <div class="btn-scanner"></div>
-                </a>
+            <div class="crypto-element java">
+                <i class="fab fa-java"></i>
+            </div>
+            <div class="crypto-element code">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="crypto-element blockchain">
+                <i class="fas fa-cube"></i>
+            </div>
+            <div class="crypto-element react">
+                <i class="fab fa-react"></i>
             </div>
         </div>
-    </div>
+    </section>
+
     
-    <!-- Enhanced Scanning Effects -->
-    <div class="scan-line quantum-scan"></div>
-    <div class="vertical-scan"></div>
-    <div class="radar-sweep"></div>
-    
-    <!-- New Terminal Effect -->
-    <div class="terminal-overlay">
-        <div class="terminal-text">
-            <span class="terminal-prompt">user@portfolio:~$ </span>
-            <span class="terminal-command">initializing_portfolio.exe</span>
-            <span class="terminal-cursor">_</span>
-        </div>
-    </div>
-</section>
-    <!-- About Section -->
     <section id="about" class="about section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-user-circle"></i></span>
+                About Me
+                <div class="title-blockchain-line"></div>
+            </h2>
+            
             <div class="about-content">
-                <div class="about-image">
-                    <img src="DP.jpg" alt="Profile Picture" class="profile-img">
-                </div>
-                <div class="about-text">
-                    <h3>Java Developer & Web3 Enthusiast</h3>
-                    <p>
-                        With a strong foundation in Java development, I'm now diving deep into the exciting world of 
-                        Web3 and blockchain technology. I'm passionate about creating decentralized applications that 
-                        solve real-world problems and push the boundaries of what's possible with blockchain technology.
-                    </p>
-                    <p>
-                        My journey involves mastering smart contract development with Solidity, building responsive 
-                        web interfaces with React, and integrating blockchain functionality using Web3.js. I believe 
-                        in the power of decentralized systems to create a more open and equitable digital future.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">20+</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">1+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">Technologies Mastered</span>
+                <div class="about-image-container">
+                    <div class="blockchain-frame">
+                        <div class="frame-corner corner-1"></div>
+                        <div class="frame-corner corner-2"></div>
+                        <div class="frame-corner corner-3"></div>
+                        <div class="frame-corner corner-4"></div>
+                        <img src="myphoto.jpg" alt="Manoj Kumar" class="profile-image">
+                        <div class="image-overlay">
+                            <div class="overlay-text">Java & Web3 Developer</div>
                         </div>
                     </div>
-                    <a href="https://drive.google.com/uc?export=download&id=19LVGx3seAhCe4C9JN-KunBdcdOu4uPxH" 
-   class="btn btn-primary download-cv" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   download="Manoj_Kumar_CV.pdf">
-    <i class="fas fa-download"></i> Download CV
-</a>
+                    
+                    <div class="blockchain-achievements">
+                        <div class="achievement-badge">
+                            <i class="fab fa-java"></i>
+                            <span>Java Expert</span>
+                        </div>
+                        <div class="achievement-badge">
+                            <i class="fab fa-ethereum"></i>
+                            <span>Blockchain Developer</span>
+                        </div>
+                        <div class="achievement-badge">
+                            <i class="fas fa-rocket"></i>
+                            <span>Innovation Driven</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-details">
+                    <h3 class="about-title">Java Developer & Web3 Enthusiast</h3>
+                    
+                    <div class="about-text">
+                        <p class="highlight-text">
+                            With a strong foundation in Java development, I'm passionate about creating robust backend systems 
+                            while exploring the exciting world of Web3 and blockchain technology.
+                        </p>
+                        
+                        <p>
+                            My journey combines enterprise-level Java development with cutting-edge blockchain solutions. 
+                            I specialize in building scalable applications using Java frameworks while developing 
+                            decentralized applications that solve real-world problems.
+                        </p>
+                        
+                        <p>
+                            From traditional web applications to smart contract development, I bridge the gap between 
+                            conventional software development and the decentralized future, creating solutions that 
+                            leverage the best of both worlds.
+                        </p>
+                    </div>
+
+                    <div class="blockchain-expertise">
+                        <h4>Core Competencies</h4>
+                        <div class="expertise-grid">
+                            <div class="expertise-item">
+                                <i class="fab fa-java"></i>
+                                <span>Java Development</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-file-contract"></i>
+                                <span>Smart Contract Development</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fab fa-react"></i>
+                                <span>Frontend Development</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-database"></i>
+                                <span>Database Management</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-cube"></i>
+                                <span>Web3 Integration</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fas fa-server"></i>
+                                <span>Backend Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-cta">
+                        <a href="https://drive.google.com/uc?export=download&id=19LVGx3seAhCe4C9JN-KunBdcdOu4uPxH" 
+                           class="btn btn-blockchain download-resume" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           download="Manoj_Kumar_CV.pdf">
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                            <div class="btn-particles"></div>
+                        </a>
+                        <div class="social-proof">
+                            <div class="proof-item">
+                                <i class="fab fa-github"></i>
+                                <span data-github-repos>20+</span> Repositories
+                            </div>
+                            <div class="proof-item">
+                                <i class="fas fa-code-branch"></i>
+                                <span>1+</span> Years Experience
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -242,116 +279,249 @@
     <!-- Skills Section -->
     <section id="skills" class="skills section">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend Development</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">HTML/CSS</span>
-                            <span class="skill-percentage">90%</span>
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-cogs"></i></span>
+                Skills & Technologies
+                <div class="title-blockchain-line"></div>
+            </h2>
+
+            <div class="skills-container">
+                <!-- Blockchain Skills -->
+                <div class="skill-category blockchain-category">
+                    <h3 class="category-title">
+                        <i class="fab fa-ethereum"></i>
+                        Blockchain & Web3
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Solidity</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" data-skill="85"></div>
+                                    </div>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="90"></div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Rust</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" data-skill="70"></div>
+                                    </div>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">JavaScript</span>
-                            <span class="skill-percentage">85%</span>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-ethereum"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Web3 / Ethers</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" data-skill="80"></div>
+                                    </div>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">React</span>
-                            <span class="skill-percentage">80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80"></div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">IPFS</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" data-skill="75"></div>
+                                    </div>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Backend Development</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Java</span>
-                            <span class="skill-percentage">95%</span>
+                <!-- Programming Languages -->
+                <div class="skill-category programming-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Programming Languages
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" data-skill="95"></div>
+                                    </div>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="95"></div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" data-skill="90"></div>
+                                    </div>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Node.js</span>
-                            <span class="skill-percentage">75%</span>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">TypeScript</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" data-skill="80"></div>
+                                    </div>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="75"></div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" data-skill="85"></div>
+                                    </div>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Web3 & Blockchain</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Solidity</span>
-                            <span class="skill-percentage">70%</span>
+                <!-- Web Development -->
+                <div class="skill-category web-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-globe"></i>
+                        Web Development
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">HTML</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" data-skill="95"></div>
+                                    </div>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="70"></div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">CSS</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" data-skill="90"></div>
+                                    </div>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span class="skill-name">Web3.js</span>
-                            <span class="skill-percentage">75%</span>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" data-skill="85"></div>
+                                    </div>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="75"></div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-fill" data-skill="80"></div>
+                                    </div>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="tech-icons">
-                <div class="tech-icon">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML5</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS3</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-js-square"></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-node-js"></i>
-                    <span>Node.js</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-java"></i>
-                    <span>Java</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-ethereum"></i>
-                    <span>Ethereum</span>
-                </div>
-                <div class="tech-icon">
-                    <i class="fab fa-bitcoin"></i>
-                    <span>Blockchain</span>
+            <!-- Blockchain Networks -->
+            <div class="blockchain-networks">
+                <h3 class="networks-title">Supported Blockchain Networks</h3>
+                <div class="networks-grid">
+                    <div class="network-item">
+                        <div class="network-icon ethereum-icon">
+                            <i class="fab fa-ethereum"></i>
+                        </div>
+                        <span class="network-name">Ethereum</span>
+                    </div>
+                    <div class="network-item">
+                        <div class="network-icon solana-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <span class="network-name">Solana</span>
+                    </div>
+                    <div class="network-item">
+                        <div class="network-icon avalanche-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <span class="network-name">Avalanche</span>
+                    </div>
+                    <div class="network-item">
+                        <div class="network-icon polkadot-icon">
+                            <i class="fas fa-circle-nodes"></i>
+                        </div>
+                        <span class="network-name">Polkadot</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -360,156 +530,280 @@
     <!-- Projects Section -->
     <section id="projects" class="projects section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-project-diagram"></i></span>
+                Featured Projects
+                <div class="title-blockchain-line"></div>
+            </h2>
+
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="tictactoee.jpg" alt="Tic-Tac-Toe Master">
+                <div class="project-card" data-category="game">
+                    <div class="project-image-container">
+                        <img src="tictactoee.jpg" alt="Tic-Tac-Toe Master" class="project-image" loading="lazy">
                         <div class="project-overlay">
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
                             <div class="project-links">
-    <a href="https://your-live-demo-url.com" class="project-link" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-external-link-alt"></i>
-    </a>
-    <a href="https://github.com/nxtman0z/Tic-Tac-Toe-master" class="project-link" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i>
-    </a>
-</div>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/nxtman0z/Tic-Tac-Toe-master" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blockchain-badge web">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Web Game</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Tic-Tac-Toe Master</h3>
-                        <p>A classic Tic-Tac-Toe game with enhanced features, allowing players to compete against each other or the computer. Includes a responsive design.</p>
-                        <div class="project-tags">
-                            <span class="tag">Html</Html></span>
-                            <span class="tag">Css</span>
-                            <span class="tag">JavaScript</span>
+                    <div class="project-content">
+                        <h3 class="project-title">Tic-Tac-Toe Master</h3>
+                        <p class="project-description">
+                            A classic Tic-Tac-Toe game with enhanced features, allowing players to compete against each other or the computer. Includes responsive design and smooth animations.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Interactive Game</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Responsive</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>Pure JS</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="ecopoints.jpg" alt="NFT Marketplace">
+                <div class="project-card" data-category="java">
+                    <div class="project-image-container">
+                        <img src="ecopoints.jpg" alt="Eco-Points System" class="project-image" loading="lazy">
                         <div class="project-overlay">
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Swing</span>
+                                <span class="tech-tag">SQL</span>
+                            </div>
                             <div class="project-links">
-    <a href="https://your-live-demo-url.com" class="project-link" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-external-link-alt"></i>
-    </a>
-    <a href="https://github.com/nxtman0z/EcoPoints" class="project-link" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i>
-    </a>
-</div>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/nxtman0z/EcoPoints" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blockchain-badge java">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Eco-Points</h3>
-                        <p>Ecopoints is a sustainability-focused platform that rewards users for eco-friendly actions. It tracks activities, awards points, and encourages positive environmental impact through gamification.</p>
-                        <div class="project-tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">Java-Swing</span>
-                            <span class="tag">SQL</span>
+                    <div class="project-content">
+                        <h3 class="project-title">Eco-Points System</h3>
+                        <p class="project-description">
+                            EcoPoints is a sustainability-focused platform that rewards users for eco-friendly actions. It tracks activities, awards points, and encourages positive environmental impact through gamification.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-leaf"></i>
+                                <span>Eco-Friendly</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-trophy"></i>
+                                <span>Gamification</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-database"></i>
+                                <span>SQL Database</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="yellow bird.jpg" alt="Flappy-Bird">
+                <div class="project-card" data-category="game">
+                    <div class="project-image-container">
+                        <img src="yellow bird.jpg" alt="Flappy Bird Game" class="project-image" loading="lazy">
                         <div class="project-overlay">
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Swing</span>
+                                <span class="tech-tag">Graphics</span>
+                            </div>
                             <div class="project-links">
-    <a href="https://your-live-demo-url.com" class="project-link" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-external-link-alt"></i>
-    </a>
-    <a href="https://github.com/nxtman0z/FlappyBird" class="project-link" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i>
-    </a>
-</div>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/nxtman0z/FlappyBird" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blockchain-badge java">
+                            <i class="fab fa-java"></i>
+                            <span>Java Game</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Flappy-Bird</h3>
-                        <p>Flappy Bird is a fun and challenging arcade-style game where players navigate a bird through obstacles, aiming for the highest score. It features simple controls, smooth gameplay, and increasing difficulty for an engaging experience</p>
-                        <div class="project-tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">Java Swing</span>
-                            
+                    <div class="project-content">
+                        <h3 class="project-title">Flappy Bird Game</h3>
+                        <p class="project-description">
+                            Flappy Bird is a fun and challenging arcade-style game where players navigate a bird through obstacles, aiming for the highest score. Features simple controls, smooth gameplay, and increasing difficulty.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Arcade Game</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Score System</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-desktop"></i>
+                                <span>Desktop App</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="auction.jpg" alt="Simple-Auction">
+                <div class="project-card" data-category="blockchain">
+                    <div class="project-image-container">
+                        <img src="auction.jpg" alt="Simple Auction DApp" class="project-image" loading="lazy">
                         <div class="project-overlay">
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Solidity</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                            </div>
                             <div class="project-links">
-    <a href="https://your-live-demo-url.com" class="project-link" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-external-link-alt"></i>
-    </a>
-    <a href="https://github.com/nxtman0z/Simple-Auction" class="project-link" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i>
-    </a>
-</div>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/nxtman0z/Simple-Auction" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blockchain-badge">
+                            <i class="fab fa-ethereum"></i>
+                            <span>Ethereum</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Simple-Auction DApp</h3>
-                        <p>A blockchain-based auction platform where users can place bids on items in real-time. Ensures transparent, secure, and tamper-proof bidding through smart contracts.</p>
-                        <div class="project-tags">
-                            <span class="tag">Solidity</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Node</span>
+                    <div class="project-content">
+                        <h3 class="project-title">Simple Auction DApp</h3>
+                        <p class="project-description">
+                            A blockchain-based auction platform where users can place bids on items in real-time. Ensures transparent, secure, and tamper-proof bidding through smart contracts.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-gavel"></i>
+                                <span>Decentralized</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Secure</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>Real-time</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="store.jpg" alt="Simple-Storage">
+                <div class="project-card" data-category="blockchain">
+                    <div class="project-image-container">
+                        <img src="store.jpg" alt="Simple Storage DApp" class="project-image" loading="lazy">
                         <div class="project-overlay">
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Solidity</span>
+                                <span class="tech-tag">IPFS</span>
+                            </div>
                             <div class="project-links">
-    <a href="https://your-live-demo-url.com" class="project-link" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-external-link-alt"></i>
-    </a>
-    <a href="https://github.com/nxtman0z/Simple-Storage" class="project-link" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i>
-    </a>
-</div>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/nxtman0z/Simple-Storage" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blockchain-badge">
+                            <i class="fab fa-ethereum"></i>
+                            <span>Ethereum</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Simple-Storage DApp</h3>
-                        <p>A decentralized application that allows users to securely store and retrieve data on the blockchain. Ensures transparency, immutability, and easy access to stored information.</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Solidity</span>
-                            <span class="tag">IPFS</span>
+                    <div class="project-content">
+                        <h3 class="project-title">Simple Storage DApp</h3>
+                        <p class="project-description">
+                            A decentralized application that allows users to securely store and retrieve data on the blockchain. Ensures transparency, immutability, and easy access to stored information.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-database"></i>
+                                <span>Data Storage</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-lock"></i>
+                                <span>Immutable</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-globe"></i>
+                                <span>Decentralized</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="verifier.jpg" alt="certificate verifier">
+                <div class="project-card" data-category="blockchain">
+                    <div class="project-image-container">
+                        <img src="verifier.jpg" alt="Certificate Verifier DApp" class="project-image" loading="lazy">
                         <div class="project-overlay">
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Solidity</span>
+                                <span class="tech-tag">Web3.js</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">IPFS</span>
+                            </div>
                             <div class="project-links">
-    <a href="https://your-live-demo-url.com" class="project-link" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-external-link-alt"></i>
-    </a>
-    <a href="https://github.com/nxtman0z/CERTIFICATE-VERIFIER-DApp" class="project-link" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i>
-    </a>
-</div>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/nxtman0z/CERTIFICATE-VERIFIER-DApp" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blockchain-badge">
+                            <i class="fab fa-ethereum"></i>
+                            <span>Ethereum</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Certificate verifier DApp</h3>
-                        <p>A decentralized application that allows users to verify the authenticity of certificates on the blockchain. Ensures tamper-proof validation and secure management of digital credentials.</p>
-                        <div class="project-tags">
-                            <span class="tag">Solidity</span>
-                            <span class="tag">Web3.js</span>
-                            <span class="tag">React</span>
-                            <span class="tag">IPFS</span>
-
+                    <div class="project-content">
+                        <h3 class="project-title">Certificate Verifier DApp</h3>
+                        <p class="project-description">
+                            A decentralized application that allows users to verify the authenticity of certificates on the blockchain. Ensures tamper-proof validation and secure management of digital credentials.
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-certificate"></i>
+                                <span>Certificate Auth</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Tamper-proof</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Verified</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -520,65 +814,117 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-handshake"></i></span>
+                Get In Touch
+                <div class="title-blockchain-line"></div>
+            </h2>
+
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Let's Work Together</h3>
-                    <p>
-                        I'm always interested in new opportunities and exciting projects. 
-                        Whether you need help with Web3 development, smart contracts, or 
-                        traditional backend development, let's discuss how we can work together.
-                    </p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>manojkumarpanigrahi54@gmail.com</span>
+                    <div class="contact-intro">
+                        <h3 class="contact-title">Let's Work Together</h3>
+                        <p class="contact-description">
+                            I'm always interested in new opportunities and exciting projects. 
+                            Whether you need help with Java development, Web3 solutions, smart contracts, 
+                            or full-stack development, let's discuss how we can work together.
+                        </p>
+                    </div>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">manojkumarpanigrahi54@gmail.com</span>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 7847900592</span>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Phone</span>
+                                <span class="method-value">+91 7847900592</span>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Bhadrak, India</span>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Location</span>
+                                <span class="method-value">Bhadrak, India</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="social-links">
-    <a href="https://www.linkedin.com/in/manoj-kumar-panigrahi/" class="social-link" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/nxtman0z" class="social-link" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i>
-    </a>
-    <a href="https://x.com/nxtman0z" class="social-link" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-twitter"></i>
-    </a>
-    <a href="https://discord.com/users/1351613063408779326" class="social-link" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-discord"></i>
-    </a>
-</div>
+
+                    <div class="social-connect">
+                        <h4>Connect on Social Platforms</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/manoj-kumar-panigrahi/" class="social-link linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/nxtman0z" class="social-link github" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://x.com/nxtman0z" class="social-link twitter" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="https://discord.com/users/1351613063408779326" class="social-link discord" target="_blank">
+                                <i class="fab fa-discord"></i>
+                                <span>Discord</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        <span class="error-message" id="name-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        <span class="error-message" id="email-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        <span class="error-message" id="subject-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
-                        <span class="error-message" id="message-error"></span>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                </form>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-header">
+                            <h4>Start a Conversation</h4>
+                            <p>Let's discuss your next project</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      placeholder="Tell me about your project requirements..."></textarea>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-blockchain submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
+                            <div class="btn-blockchain-effect"></div>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -587,14 +933,66 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Your Name. All rights reserved. Built with passion for Web3.</p>
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fab fa-java"></i>
+                        <span>Manoj.dev</span>
+                    </div>
+                    <p class="footer-tagline">Java Developer & Web3 Enthusiast</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#contact">Java Development</a></li>
+                            <li><a href="#contact">Web Development</a></li>
+                            <li><a href="#contact">Blockchain Solutions</a></li>
+                            <li><a href="#contact">Smart Contracts</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="footer-social">
+                            <a href="https://github.com/nxtman0z" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/manoj-kumar-panigrahi/" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://x.com/nxtman0z" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://discord.com/users/1351613063408779326" target="_blank">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Manoj Kumar. All rights reserved. Built with passion for Java & Web3.</p>
+                </div>
                 <button class="back-to-top" id="back-to-top">
-                    <i class="fas fa-chevron-up"></i>
+                    <i class="fas fa-arrow-up"></i>
                 </button>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
