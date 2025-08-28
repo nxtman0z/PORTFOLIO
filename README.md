@@ -1,51 +1,40 @@
-# 🌐 Personal Portfolio Website  
+# 🚀 Java & Blockchain Developer Portfolio
 
-Welcome to my **Portfolio Website** project! 🎨  
-This portfolio is built using **HTML, CSS, and JavaScript** to showcase my skills, projects, and experience in a clean and responsive design.  
+<div align="center">
 
----
+![Portfolio](https://img.shields.io/badge/Portfolio-Live-brightgreen?style=for-the-badge&logo=vercel)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![Built with](https://img.shields.io/badge/Built%20with-HTML%20CSS%20JS-orange?style=for-the-badge)
 
-## ✨ Features  
-✔️ Fully responsive design for all devices  
-✔️ Smooth animations and transitions  
-✔️ Sections for About Me, Projects, and Contact  
-✔️ Clean, modern UI using pure HTML, CSS, and JS  
-✔️ Interactive navigation menu  
+</div>
 
----
+## 📖 About
 
-## 🚀 Live Demo  
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen?style=for-the-badge)](#)  
-**Coming Soon! Stay Tuned!** ⏳  
+This is my personal portfolio website showcasing my work as a **Java Developer** and **Blockchain Enthusiast**. The portfolio features modern animations, responsive design, and interactive elements to provide an engaging user experience.
 
----
+## 🌐 Live Demo
 
+**[View Portfolio →](https://obitosportfolio.vercel.app/)**
 
----
+## ✨ Features
 
-## 🖼️ Screenshots  
-| Home Page | Projects Section |
-|-----------|-------------------|
-| ![Home](https://via.placeholder.com/400x200?text=Home+Preview) | ![Projects](https://via.placeholder.com/400x200?text=Projects+Preview) |
+- 🎨 **Modern Design**: Glass morphism UI with gradient effects
+- 📱 **Fully Responsive**: Works perfectly on all devices
+- ⚡ **Fast Loading**: Optimized performance and animations
+- 🎯 **Interactive**: Dynamic animations and hover effects
+- 🔄 **Auto Deploy**: Connected with GitHub for seamless updates
+- 🌙 **Theme Toggle**: Dark/Light mode support
+- 📊 **Real-time Stats**: GitHub integration for live data
 
----
+## 🛠️ Built With
 
-## 🛠️ Built With  
-- **HTML5** – Structure  
-- **CSS3** – Styling & Animations  
-- **JavaScript** – Interactivity  
+- **HTML5** - Structure and content
+- **CSS3** - Styling and animations  
+- **JavaScript** - Interactive functionality
+- **Vercel** - Hosting and deployment
 
----
+## 🚀 Quick Start
 
-## 📬 Contact Me  
-📧 **Email:** [manoj.javadev2204@gmail.com](mailto:manoj.javadev2204@gmail.com)  
-🌐 **LinkedIn:** [Manoj Kumar Panigrahi](https://www.linkedin.com/in/manoj-kumar-panigrahi/)  
-🐦 **Twitter (X):** [@nxtman0z](https://x.com/nxtman0z)  
-
----
-
-### ⭐ Don’t forget to **star this repository** if you like it!  
-Made with ❤️ by [Manoj♥️](https://github.com/nxtman0z)  
-
----
-  
+1. Clone the repository
+```bash
+git clone https://github.com/nxtman0z/portfolio.git
