@@ -887,7 +887,7 @@
                 </div>
 
                 <div class="contact-form-container">
-                    <form class="contact-form" id="contact-form">
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/mdkllpdy" method="POST">
                         <div class="form-header">
                             <h4>Start a Conversation</h4>
                             <p>Let's discuss your next project</p>
@@ -901,13 +901,13 @@
 
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="_replyto" required>
                             <div class="input-line"></div>
                         </div>
 
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
+                            <input type="text" id="subject" name="_subject" required>
                             <div class="input-line"></div>
                         </div>
 
@@ -918,6 +918,7 @@
                             <div class="input-line"></div>
                         </div>
 
+                        <input type="hidden" name="_next" value="https://nxtman0z.github.io/PORTFOLIO/thankyou.html">
                         <button type="submit" class="btn btn-blockchain submit-btn">
                             <i class="fas fa-paper-plane"></i>
                             <span>Send Message</span>
@@ -993,6 +994,7 @@
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

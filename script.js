@@ -8,6 +8,9 @@
 const CONFIG = {
     ANIMATION_DURATION: 2000,
     SCROLL_THRESHOLD: 100,
+    EMAIL_SERVICE_ID: 'YOUR_EMAILJS_SERVICE_ID', // Replace with your EmailJS service ID
+    EMAIL_TEMPLATE_ID: 'YOUR_EMAILJS_TEMPLATE_ID', // Replace with your EmailJS template ID
+    EMAIL_PUBLIC_KEY: 'YOUR_EMAILJS_PUBLIC_KEY', // Replace with your EmailJS public key
     TYPEWRITER_SPEED: 100,
     LOADING_DURATION: 3000,
     PARTICLE_COUNT: 50,
