@@ -1,10 +1,4 @@
-// Enhanced Java & Blockchain Portfolio JavaScript
-// Modern ES6+ JavaScript with advanced animations and interactions
-
-// ===========================
-// GLOBAL VARIABLES & CONFIG
-// ===========================
-
+// Main Configuration
 const CONFIG = {
     ANIMATION_DURATION: 2000,
     SCROLL_THRESHOLD: 100,

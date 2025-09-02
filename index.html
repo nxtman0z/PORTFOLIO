@@ -992,9 +992,20 @@
         </div>
     </footer>
 
+    <!-- Styles -->
+    <link rel="stylesheet" href="animations.css">
+
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="cursor.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        // Initialize custom cursor
+        document.addEventListener('DOMContentLoaded', () => {
+            new CustomCursor();
+        });
+    </script>
 </body>
 </html>
