@@ -9,7 +9,7 @@ Experience my portfolio in action! Click the button below to explore:
 
 [![View Live Demo](https://img.shields.io/badge/🌟%20View%20Demo-Live%20Portfolio-ff6b6b?style=for-the-badge&logo=vercel&logoColor=white)](https://obitosportfolio.vercel.app/)
 
-🔗 **Direct Link:** [https://obitosportfolio.vercel.app/](https://obitosportfolio.vercel.app/)
+
 
 ---
 
