@@ -25,9 +25,11 @@ Experience my portfolio in action! Click the button below to explore:
 ---
 
 ## 🖼️ Screenshots  
-| Home Page | Projects Section |
-|-----------|-------------------|
-| ![Home](https://via.placeholder.com/400x200?text=Home+Preview) | ![Projects](https://via.placeholder.com/400x200?text=Projects+Preview) |
+| Home Page | 
+|-----------|
+| <img width="1914" height="873" alt="Screenshot 2025-09-14 233321" src="https://github.com/user-attachments/assets/46cd9865-5d5b-4698-9069-f01f724e81e2" />
+
+ |
 
 ---
 
